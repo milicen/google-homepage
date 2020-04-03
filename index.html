@@ -4,7 +4,8 @@
 	<title>Google</title>
 	<style type="text/css">
 		body{
-			
+			font-family: Helvetica, sans-serif;
+			font-size: 14px;
 
 		}
 
@@ -16,54 +17,115 @@
 			align-items: center;
 			justify-content: center;
 			top: 0;
-			bottom: 0;
+			bottom: 150px;
 			left: 0;
 			right: 0;
 		}
 
 		img{
-			max-width: 272px;
-			max-height: 92px;
+			height: auto;
+			width: 400px;
+			position: relative;
+			bottom: 30px;
 		}
 
 		#search{
-			border-style: none;
+			border-style: solid;
+			border-color: lightgrey;
+			border-width: 1px;
 			border-radius: 30px;
-			background-color: #f3f3f3;
-			width: 300px;
-			height: 50px;
+			width: 500px;
+			height: 40px;
 			margin: 5px;
-			padding: 0 20px;
+			padding: 0 20px 0 60px;
 		}
+
+		#search:hover{
+			box-shadow: 0 0 5px lightgrey;
+		}
+
 
 		#main{
 			padding: 10px;
+		}
+
+		li{
+			color: grey;
 		}
 
 		.top-nav ul{
 			display: flex;
 			flex-direction: row;
 			justify-content: flex-end;
+			align-items: center;
+
 		}
 
 		.top-nav li{
 			margin-right: 2em;
 			list-style: none;
+			color: black;
+		}		
+
+		li:hover{
+			text-decoration: underline;
+
+		}
+
+		#thumbnail{
+			width: 25px;
+			height: auto;
+			position: relative;
+			top: 1px;
+		}
+
+		#user{
+			width: 40px;
+			height: auto;
+			position: relative;
+			top: 1px;
 		}
 
 		footer ul{
 			position: absolute;
 			display: flex;
 			flex-direction: row;
+			justify-content: flex-end;
+			align-items: center;
+			background-color: #f3f3f3;
+			border-top: solid 1px lightgrey;
+			width: 100%;
+			height: 50px;
+			margin: auto;
 			bottom: 0;
 			right: 0;
-
-
 		}
 
 		footer li{
 			margin-right: 2em;
 			list-style: none;
+		}
+
+		#toggle{
+			list-style: none;
+			display: flex;
+			position: absolute;
+			top: 400px;
+
+		}
+
+		#toggle li{
+			background-color: #f3f3f3;
+			padding: 10px 20px;
+			margin: 0 15px;
+			color: grey;
+			border-radius: 5px;
+		}
+
+		#toggle li:hover{
+			border: solid 1px grey;
+			text-decoration: none;
+			box-shadow: 0 0 2px lightgrey;
 		}
 
 	</style>
@@ -74,6 +136,8 @@
 		<ul>
 			<li>Gmail</li>
 			<li>Images</li>
+			<li><img src="../google-homepage/thumbnail.png" id="thumbnail"></li>
+			<li><img src="../google-homepage/user.png" id="user"></li>
 		</ul>
 	</nav>
 
@@ -82,6 +146,10 @@
 		<form id="search-form" action="#" method="post">
 			<input type="text" name="search" id="search" placeholder="Search">
 		</form>
+		<ul id="toggle">
+			<li>Google Search</li>
+			<li>I'm Feeling lucky</li>
+		</ul>
 	</div>
 
 	<footer>
